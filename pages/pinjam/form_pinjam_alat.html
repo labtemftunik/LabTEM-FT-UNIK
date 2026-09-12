@@ -1,0 +1,451 @@
+<div class="pinjam-alat-page">
+
+<!-- ==========================================
+     HEADER
+=========================================== -->
+
+<section class="pinjam-alat-hero">
+
+    <div class="pinjam-alat-hero-content">
+
+        <span class="pinjam-alat-label">
+            LABORATORIUM TEKNOLOGI ELEKTRO-MEDIS FT UNIK
+        </span>
+
+        <h1>
+            Peminjaman Alat
+        </h1>
+
+        <p>
+            Ajukan peminjaman peralatan laboratorium
+            untuk kegiatan praktikum, penelitian,
+            maupun keperluan lainnya.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ==========================================
+     FORM
+=========================================== -->
+
+<section class="pinjam-form-section">
+
+    <div class="pinjam-form-card">
+
+        <div class="form-title">
+
+            <span>
+                FORM PEMINJAMAN
+            </span>
+
+            <h2>
+                Ajukan Peminjaman Alat
+            </h2>
+
+            <p>
+                Silakan lengkapi data berikut dengan benar.
+            </p>
+
+        </div>
+
+
+        <!-- ======================================
+             DATA PEMINJAM
+        ======================================= -->
+
+        <div class="form-section">
+
+            <h3>
+                <i class="bi bi-person"></i>
+                Data Peminjam
+            </h3>
+
+
+            <div class="form-grid">
+
+                <div class="form-group">
+
+                    <label for="nama">
+                        Nama Lengkap
+                    </label>
+
+                    <input
+                        type="text"
+                        id="nama"
+                        name="nama"
+                        placeholder="Masukkan nama lengkap"
+                        required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="nim">
+                        NIM
+                    </label>
+
+                    <input
+                        type="text"
+                        id="nim"
+                        name="nim"
+                        placeholder="Masukkan NIM"
+                        required>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ======================================
+             ALAT
+        ======================================= -->
+
+        <div class="form-section">
+
+            <div class="form-section-heading">
+
+                <div>
+
+                    <h3>
+                        <i class="bi bi-tools"></i>
+                        Alat yang Dipinjam
+                    </h3>
+
+                    <p>
+                        Pilih alat dan tentukan jumlah yang diperlukan.
+                    </p>
+
+                </div>
+
+                <button
+                    type="button"
+                    class="btn-add"
+                    onclick="tambahAlat()">
+
+                    <i class="bi bi-plus-lg"></i>
+                    Tambah Alat
+
+                </button>
+
+            </div>
+
+
+            <div id="alat-container">
+
+                <div class="item-row alat-row">
+
+                    <div class="form-group">
+
+                        <label>
+                            Nama Alat
+                        </label>
+
+                            <div class="alat-select-wrapper">
+
+                                <input
+                                    type="text"
+                                    class="alat-select-display"
+                                    placeholder="Pilih alat"
+                                    autocomplete="off"
+                                    readonly>
+
+                                <input
+                                    type="hidden"
+                                    class="alat-select">
+
+                                <i class="bi bi-chevron-down alat-select-icon"></i>
+
+                                <div class="alat-dropdown">
+
+                                    <div class="alat-search-wrapper">
+
+                                        <i class="bi bi-search"></i>
+
+                                        <input
+                                            type="text"
+                                            class="alat-filter-input"
+                                            placeholder="Cari alat..."
+                                            autocomplete="off">
+
+                                    </div>
+
+                                    <div class="alat-options"></div>
+
+                                </div>
+
+                            </div>
+
+                    </div>
+
+
+                    <div class="form-group jumlah-group">
+
+                        <label>
+                            Jumlah
+                        </label>
+
+                        <input
+                            type="number"
+                            class="alat-jumlah"
+                            min="1"
+                            value="1"
+                            required>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        class="btn-remove"
+                        onclick="hapusItem(this)"
+                        title="Hapus">
+
+                        <i class="bi bi-trash"></i>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ======================================
+             KOMPONEN
+        ======================================= -->
+
+        <div class="form-section">
+
+            <div class="form-section-heading">
+
+                <div>
+
+                    <h3>
+                        <i class="bi bi-box-seam"></i>
+                        Komponen
+                    </h3>
+
+                    <p>
+                        Tuliskan komponen yang diperlukan dan jumlahnya.
+                    </p>
+
+                </div>
+
+                <button
+                    type="button"
+                    class="btn-add"
+                    onclick="tambahKomponen()">
+
+                    <i class="bi bi-plus-lg"></i>
+                    Tambah Komponen
+
+                </button>
+
+            </div>
+
+
+            <div id="komponen-container">
+
+                <div class="item-row komponen-row">
+
+                    <div class="form-group">
+
+                        <label>
+                            Nama / Jenis Komponen
+                        </label>
+
+                        <input
+                            type="text"
+                            class="komponen-nama"
+                            placeholder="Contoh: Resistor 1 kΩ"
+                            required>
+
+                    </div>
+
+
+                    <div class="form-group jumlah-group">
+
+                        <label>
+                            Jumlah
+                        </label>
+
+                        <input
+                            type="number"
+                            class="komponen-jumlah"
+                            min="1"
+                            value="1"
+                            required>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        class="btn-remove"
+                        onclick="hapusItem(this)"
+                        title="Hapus">
+
+                        <i class="bi bi-trash"></i>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ======================================
+             KEPERLUAN
+        ======================================= -->
+
+        <div class="form-section">
+
+            <h3>
+                <i class="bi bi-clipboard-check"></i>
+                Keperluan Peminjaman
+            </h3>
+
+
+            <div class="keperluan-options">
+
+                <label class="keperluan-option">
+
+                    <input
+                        type="radio"
+                        name="keperluan"
+                        value="Praktikum"
+                        onchange="ubahKeperluan()"
+                        required>
+
+                    <span class="keperluan-icon">
+                        <i class="bi bi-mortarboard"></i>
+                    </span>
+
+                    <span>
+                        <strong>Praktikum</strong>
+                        <small>Kegiatan praktikum</small>
+                    </span>
+
+                </label>
+
+
+                <label class="keperluan-option">
+
+                    <input
+                        type="radio"
+                        name="keperluan"
+                        value="Penelitian"
+                        onchange="ubahKeperluan()">
+
+                    <span class="keperluan-icon">
+                        <i class="bi bi-lightbulb"></i>
+                    </span>
+
+                    <span>
+                        <strong>Penelitian</strong>
+                        <small>Kegiatan penelitian</small>
+                    </span>
+
+                </label>
+
+
+                <label class="keperluan-option">
+
+                    <input
+                        type="radio"
+                        name="keperluan"
+                        value="Lainnya"
+                        onchange="ubahKeperluan()">
+
+                    <span class="keperluan-icon">
+                        <i class="bi bi-three-dots"></i>
+                    </span>
+
+                    <span>
+                        <strong>Lainnya</strong>
+                        <small>Keperluan lainnya</small>
+                    </span>
+
+                </label>
+
+            </div>
+
+
+            <!-- DETAIL KEPERLUAN -->
+
+            <div
+                id="detail-keperluan"
+                class="detail-keperluan">
+
+            </div>
+
+        </div>
+
+
+        <!-- ======================================
+             TANGGAL
+        ======================================= -->
+
+        <div class="form-section">
+
+            <h3>
+                <i class="bi bi-calendar-event"></i>
+                Rencana Peminjaman
+            </h3>
+
+
+            <div class="form-group">
+
+                <label for="tanggal-pinjam">
+                    Tanggal Pinjam
+                </label>
+
+                <input
+                    type="date"
+                    id="tanggal-pinjam"
+                    required>
+
+            </div>
+
+        </div>
+
+
+        <!-- ======================================
+             SUBMIT
+        ======================================= -->
+
+        <div class="form-submit">
+
+            <button
+                type="button"
+                class="btn-submit"
+                onclick="submitPeminjaman()">
+
+                <i class="bi bi-send"></i>
+
+                Ajukan Peminjaman
+
+            </button>
+
+        </div>
+
+
+        <div
+            id="form-message"
+            class="form-message">
+        </div>
+
+    </div>
+
+</section>
+
+</div>

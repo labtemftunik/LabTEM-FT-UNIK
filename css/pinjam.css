@@ -1,0 +1,1464 @@
+/* ==========================================
+   PINJAM
+   LABORATORIUM TEKNOLOGI ELEKTRO-MEDIS
+========================================== */
+
+
+/* ==========================================
+   HALAMAN UTAMA PEMINJAMAN
+========================================== */
+
+.pinjam-page {
+    width: 100%;
+    min-height: calc(100vh - 65px);
+}
+
+
+/* ==========================================
+   HERO PINJAM
+========================================== */
+
+.pinjam-hero {
+    position: relative;
+    overflow: hidden;
+
+    width: 100%;
+    padding: 45px;
+
+    background: linear-gradient(
+        135deg,
+        #0d6efd,
+        #084298
+    );
+
+    color: #fff;
+}
+
+.pinjam-hero::before,
+.pinjam-hero::after {
+    content: "";
+
+    position: absolute;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, .07);
+}
+
+.pinjam-hero::before {
+    width: 280px;
+    height: 280px;
+
+    right: -100px;
+    top: -120px;
+}
+
+.pinjam-hero::after {
+    width: 160px;
+    height: 160px;
+
+    right: 120px;
+    bottom: -100px;
+
+    background: rgba(255, 255, 255, .05);
+}
+
+.pinjam-hero-content {
+    position: relative;
+    z-index: 1;
+
+    width: 100%;
+    max-width: auto;
+
+    margin: 0 auto;
+}
+
+.pinjam-label {
+    display: inline-block;
+
+    margin-bottom: 12px;
+
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+
+    opacity: .85;
+}
+
+.pinjam-hero h1 {
+    margin: 0 0 12px;
+
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.pinjam-hero p {
+    max-width: 650px;
+
+    margin: 0;
+
+    font-size: 16px;
+    line-height: 1.7;
+
+    opacity: .9;
+}
+
+
+/* ==========================================
+   MENU PEMINJAMAN
+========================================== */
+
+.pinjam-menu {
+    width: 100%;
+    max-width: auto;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 20px;
+
+    margin: 40px auto;
+    padding: 0 10px;
+}
+
+.pinjam-card {
+    display: block;
+
+    padding: 28px 24px;
+
+    background: rgba(255, 255, 255, .9);
+
+    border: 1px solid #eee;
+    border-radius: 16px;
+
+    color: #333;
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease,
+        border-color .25s ease;
+}
+
+.pinjam-card:hover {
+    color: #333;
+
+    transform: translateY(-5px);
+
+    border-color: #d5e5ff;
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, .10);
+}
+
+
+/* ==========================================
+   ICON PINJAM
+========================================== */
+
+.pinjam-icon {
+    width: 64px;
+    height: 64px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 20px;
+
+    background: #eaf2ff;
+    color: #0d6efd;
+
+    border-radius: 16px;
+
+    font-size: 29px;
+
+    transition: .25s;
+}
+
+.pinjam-card:hover .pinjam-icon {
+    background: #0d6efd;
+    color: #fff;
+
+    transform: scale(1.05);
+}
+
+
+/* ==========================================
+   TEXT CARD
+========================================== */
+
+.pinjam-card h4 {
+    margin: 0 0 9px;
+
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.pinjam-card p {
+    margin: 0 0 18px;
+
+    color: #777;
+
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.pinjam-arrow {
+    color: #0d6efd;
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.pinjam-arrow i {
+    margin-left: 5px;
+
+    transition: .25s;
+}
+
+.pinjam-card:hover .pinjam-arrow i {
+    margin-left: 10px;
+}
+
+
+/* ==========================================
+   HALAMAN PEMINJAMAN ALAT
+========================================== */
+
+.pinjam-alat-page {
+    width: 100%;
+    min-height: calc(100vh - 65px);
+
+    padding-bottom: 60px;
+}
+
+
+/* ==========================================
+   HEADER PEMINJAMAN ALAT
+========================================== */
+
+.pinjam-alat-header,
+.pinjam-alat-hero {
+    width: 100%;
+
+    padding: 55px 30px;
+
+    background: linear-gradient(
+        135deg,
+        #0d6efd,
+        #084298
+    );
+
+    color: #fff;
+}
+
+.pinjam-alat-header-content,
+.pinjam-alat-hero-content {
+    width: 100%;
+    max-width: 1100px;
+
+    margin: 0 auto;
+}
+
+.pinjam-alat-header h1,
+.pinjam-alat-hero h1 {
+    margin: 10px 0;
+
+    font-size: 42px;
+    font-weight: 700;
+}
+
+.pinjam-alat-header p,
+.pinjam-alat-hero p {
+    max-width: 650px;
+
+    margin: 0;
+
+    font-size: 16px;
+    line-height: 1.7;
+
+    opacity: .9;
+}
+
+
+/* ==========================================
+   TOMBOL PINJAM
+========================================== */
+
+.pinjam-action {
+    width: 100%;
+    max-width: auto;
+    margin: 30px auto;
+    padding: 0 10px;
+}
+
+.pinjam-main-button {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 300px;
+
+    padding: 20px 25px;
+
+    background: #db7617;
+    color: #fff;
+
+    border-radius: 10px;
+
+    font-weight: 600;
+
+    box-shadow:
+        0 15px 20px rgba(207, 144, 6, 0.651);
+
+    transition: .25s;
+}
+
+.pinjam-main-button:hover {
+    background: #8f4c00;
+    color: #ffffff;
+
+    transform: translateY(-2px);
+}
+
+
+/* ==========================================
+   DAFTAR ALAT
+========================================== */
+
+.alat-dipinjam {
+    width: 100%;
+    max-width: auto;
+
+    margin: 10px auto 40px;
+
+    padding: 0 10px;
+}
+
+.section-heading {
+    margin-bottom: 25px;
+}
+
+.section-label {
+    display: inline-block;
+
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+
+    color: #0d6efd;
+}
+
+.section-heading h2 {
+    margin: 5px 0;
+
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.section-heading p {
+    margin: 0;
+
+    color: #6c757d;
+}
+
+
+/* ==========================================
+   GRID ALAT
+========================================== */
+
+.alat-list {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.alat-card {
+    padding: 20px;
+
+    background: #fff;
+
+    border: 1px solid #e9ecef;
+    border-radius: 14px;
+
+    box-shadow:
+        0 5px 18px rgba(0, 0, 0, .06);
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease;
+}
+
+.alat-card:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, .10);
+}
+
+
+/* ==========================================
+   ICON ALAT
+========================================== */
+
+.alat-icon {
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 15px;
+
+    background: #eef4ff;
+    color: #0d6efd;
+
+    border-radius: 12px;
+
+    font-size: 24px;
+}
+
+.alat-info h3 {
+    margin: 0 0 15px;
+
+    font-size: 19px;
+}
+
+
+/* ==========================================
+   DETAIL ALAT
+========================================== */
+
+.alat-detail {
+    display: flex;
+    justify-content: space-between;
+
+    gap: 10px;
+
+    padding: 8px 0;
+
+    border-bottom: 1px solid #f0f0f0;
+
+    font-size: 13px;
+}
+
+.alat-detail span {
+    color: #6c757d;
+}
+
+.alat-detail i {
+    margin-right: 5px;
+
+    color: #0d6efd;
+}
+
+.alat-detail strong {
+    text-align: right;
+}
+
+
+/* ==========================================
+   STATUS
+========================================== */
+
+.alat-status {
+    margin-top: 15px;
+}
+
+.status-menunggu {
+    display: inline-block;
+
+    padding: 6px 10px;
+
+    background: #ffcdcd;
+    color: #850404;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.status-dipinjam {
+    display: inline-block;
+
+    padding: 6px 10px;
+
+    background: #fff3cd;
+    color: #856404;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+
+/* ==========================================
+   LOGBOOK
+========================================== */
+
+.logbook-section {
+    width: 100%;
+    max-width: auto;
+
+    margin: 0 auto;
+
+    padding: 0 10px;
+}
+
+.logbook-card {
+    display: flex;
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 25px;
+
+    background: #fff;
+
+    border: 1px solid #e9ecef;
+    border-radius: 16px;
+
+    box-shadow:
+        0 5px 18px rgba(0, 0, 0, .06);
+}
+
+.logbook-icon {
+    width: 60px;
+    height: 60px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #eef4ff;
+    color: #0d6efd;
+
+    border-radius: 14px;
+
+    font-size: 26px;
+}
+
+.logbook-content {
+    flex: 1;
+}
+
+.logbook-content span {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+
+    color: #0d6efd;
+}
+
+.logbook-content h2 {
+    margin: 4px 0;
+
+    font-size: 21px;
+}
+
+.logbook-content p {
+    margin: 0;
+
+    color: #6c757d;
+
+    font-size: 14px;
+}
+
+.logbook-button {
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 11px 17px;
+
+    background: #0d6efd;
+    color: #fff;
+
+    border-radius: 8px;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    transition: .25s;
+}
+
+.logbook-button:hover {
+    background: #084298;
+    color: #fff;
+}
+
+
+/* ==========================================
+   FORM PEMINJAMAN ALAT
+========================================== */
+
+.pinjam-form-section {
+    width: 100%;
+
+    margin: 0;
+
+    padding: 40px 10px;
+}
+
+.pinjam-form-card {
+    width: 100%;
+    max-width: auto;
+
+    margin: 0 auto;
+
+    padding: 35px;
+
+    background: #fff;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 8px 30px rgba(0, 0, 0, .08);
+}
+
+
+/* ==========================================
+   JUDUL FORM
+========================================== */
+
+.form-title {
+    margin-bottom: 10px;
+
+    padding-bottom: 25px;
+
+    border-bottom: 1px solid #eee;
+}
+
+.form-title span {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+
+    color: #0d6efd;
+}
+
+.form-title h2 {
+    margin: 6px 0;
+
+    font-size: 27px;
+}
+
+.form-title p {
+    margin: 0;
+
+    color: #6c757d;
+}
+
+
+/* ==========================================
+   SECTION FORM
+========================================== */
+
+.form-section {
+    padding: 25px 0;
+
+    border-bottom: 1px solid #eee;
+}
+
+.form-section h3 {
+    margin-bottom: 20px;
+
+    font-size: 19px;
+}
+
+.form-section h3 i {
+    margin-right: 8px;
+
+    color: #0d6efd;
+}
+
+.form-section-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    margin-bottom: 20px;
+}
+
+.form-section-heading h3 {
+    margin: 0 0 5px;
+}
+
+.form-section-heading p {
+    margin: 0;
+
+    color: #6c757d;
+
+    font-size: 13px;
+}
+
+
+/* ==========================================
+   FORM GRID
+========================================== */
+
+.form-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #343a40;
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+
+    padding: 11px 13px;
+
+    background: #fff;
+
+    border: 1px solid #dfe3e8;
+
+    border-radius: 9px;
+
+    outline: none;
+
+    font-size: 14px;
+
+    transition:
+        border-color .2s,
+        box-shadow .2s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #0d6efd;
+
+    box-shadow:
+        0 0 0 3px rgba(13, 110, 253, .1);
+}
+
+
+/* ==========================================
+   ITEM ALAT & KOMPONEN
+========================================== */
+
+.item-row {
+    display: grid;
+
+    grid-template-columns:
+        1fr 120px 45px;
+
+    align-items: end;
+
+    gap: 12px;
+
+    margin-bottom: 10px;
+
+    padding: 15px;
+
+    background: #f8f9fa;
+
+    border: 1px solid #e9ecef;
+
+    border-radius: 10px;
+}
+
+.item-row .form-group {
+    margin: 0;
+}
+
+
+/* ==========================================
+   TOMBOL TAMBAH
+========================================== */
+
+.btn-add {
+    border: none;
+
+    padding: 9px 13px;
+
+    background: #eef4ff;
+    color: #0d6efd;
+
+    border-radius: 8px;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: .2s;
+}
+
+.btn-add:hover {
+    background: #0d6efd;
+    color: #fff;
+}
+
+
+/* ==========================================
+   TOMBOL HAPUS
+========================================== */
+
+.btn-remove {
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #fff0f0;
+    color: #dc3545;
+
+    cursor: pointer;
+
+    transition: .2s;
+}
+
+.btn-remove:hover {
+    background: #dc3545;
+    color: #fff;
+}
+
+
+/* ==========================================
+   KEPERLUAN
+========================================== */
+
+.keperluan-options {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 15px;
+}
+
+.keperluan-option {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 15px;
+
+    border: 1px solid #e1e5ea;
+
+    border-radius: 11px;
+
+    cursor: pointer;
+
+    transition: .2s;
+}
+
+.keperluan-option:hover {
+    border-color: #0d6efd;
+
+    background: #f7faff;
+}
+
+.keperluan-option input {
+    accent-color: #0d6efd;
+}
+
+.keperluan-icon {
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    background: #eef4ff;
+    color: #0d6efd;
+
+    border-radius: 9px;
+
+    font-size: 19px;
+}
+
+.keperluan-option strong {
+    display: block;
+
+    font-size: 14px;
+}
+
+.keperluan-option small {
+    color: #6c757d;
+
+    font-size: 11px;
+}
+
+
+/* ==========================================
+   DETAIL KEPERLUAN
+========================================== */
+
+.detail-keperluan {
+    margin-top: 20px;
+}
+
+
+/* ==========================================
+   SUBMIT
+========================================== */
+
+.form-submit {
+    padding-top: 30px;
+
+    text-align: right;
+}
+
+.btn-submit {
+    border: none;
+
+    padding: 13px 22px;
+
+    background: #0d6efd;
+    color: #fff;
+
+    border-radius: 9px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: .2s;
+}
+
+.btn-submit:hover {
+    background: #084298;
+
+    transform: translateY(-1px);
+}
+
+
+/* ==========================================
+   PESAN
+========================================== */
+
+.form-message {
+    display: none;
+
+    margin-top: 20px;
+
+    padding: 12px 15px;
+
+    border-radius: 9px;
+
+    font-size: 13px;
+}
+
+.form-message.success {
+    display: block;
+
+    background: #eaf7ee;
+    color: #198754;
+}
+
+.form-message.error {
+    display: block;
+
+    background: #fff0f0;
+    color: #dc3545;
+}
+
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 992px) {
+
+    .alat-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 768px) {
+
+    .pinjam-hero {
+        padding: 35px 25px;
+    }
+
+    .pinjam-hero h1 {
+        font-size: 32px;
+    }
+
+    .pinjam-menu {
+        grid-template-columns: 1fr;
+
+        padding: 0 20px;
+    }
+
+    .pinjam-alat-header,
+    .pinjam-alat-hero {
+        padding: 40px 20px;
+    }
+
+    .pinjam-alat-header h1,
+    .pinjam-alat-hero h1 {
+        font-size: 32px;
+    }
+
+    .pinjam-action,
+    .alat-dipinjam,
+    .logbook-section {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .alat-list {
+        grid-template-columns: 1fr;
+    }
+
+    .pinjam-form-section {
+        padding: 25px 15px;
+    }
+
+    .pinjam-form-card {
+        padding: 25px 18px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-section-heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .item-row {
+        grid-template-columns:
+            1fr 100px 40px;
+    }
+
+    .keperluan-options {
+        grid-template-columns: 1fr;
+    }
+
+    .logbook-card {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .logbook-button {
+        width: 100%;
+
+        justify-content: center;
+    }
+
+    .form-submit {
+        text-align: stretch;
+    }
+
+    .btn-submit {
+        width: 100%;
+    }
+
+}
+
+
+/* ==========================================
+   SMALL MOBILE
+========================================== */
+
+@media (max-width: 576px) {
+
+    .pinjam-hero {
+        padding: 30px 20px;
+    }
+
+    .pinjam-hero h1 {
+        font-size: 28px;
+    }
+
+    .pinjam-hero p {
+        font-size: 14px;
+    }
+
+    .pinjam-menu {
+        padding: 0 15px;
+    }
+
+    .pinjam-alat-header,
+    .pinjam-alat-hero {
+        padding: 35px 18px;
+    }
+
+    .pinjam-alat-header h1,
+    .pinjam-alat-hero h1 {
+        font-size: 28px;
+    }
+
+    .pinjam-action,
+    .alat-dipinjam,
+    .logbook-section {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .item-row {
+        grid-template-columns: 1fr;
+    }
+
+    .btn-remove {
+        width: 100%;
+    }
+
+}
+
+/* ==========================================
+   SEARCHABLE ALAT
+========================================== */
+
+.alat-select-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+
+/* KOLOM UTAMA */
+
+.alat-select-display {
+    width: 100%;
+    height: 46px;
+
+    padding: 10px 42px 10px 14px;
+
+    border: 1px solid #ced4da;
+    border-radius: 10px;
+
+    background: #fff;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    outline: none;
+}
+
+.alat-select-display:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.12);
+}
+
+
+/* ICON PANAH */
+
+.alat-select-icon {
+    position: absolute;
+
+    right: 15px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color: #777;
+
+    pointer-events: none;
+}
+
+
+/* DROPDOWN */
+
+.alat-dropdown {
+    position: absolute;
+
+    top: calc(100% + 5px);
+    left: 0;
+    right: 0;
+
+    background: #fff;
+
+    border: 1px solid #ddd;
+    border-radius: 10px;
+
+    box-shadow: 0 8px 25px rgba(0,0,0,.15);
+
+    z-index: 9999;
+
+    display: none;
+
+    overflow: hidden;
+}
+
+.alat-select-wrapper.open .alat-dropdown {
+    display: block;
+}
+
+
+/* KOTAK PENCARIAN */
+
+.alat-search-wrapper {
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 10px;
+
+    border-bottom: 1px solid #eee;
+
+    background: #fff;
+}
+
+.alat-search-wrapper i {
+    color: #777;
+}
+
+.alat-filter-input {
+    width: 100%;
+
+    border: none;
+    outline: none;
+
+    font-size: 14px;
+}
+
+
+/* DAFTAR PILIHAN */
+
+.alat-options {
+    max-height: 220px;
+
+    overflow-y: auto;
+}
+
+
+/* ITEM */
+
+.alat-option {
+    padding: 12px 14px;
+
+    cursor: pointer;
+
+    font-size: 15px;
+
+    transition: background .15s;
+}
+
+.alat-option:hover {
+    background: #f1f6ff;
+}
+
+
+/* TIDAK DITEMUKAN */
+
+.alat-tidak-ditemukan {
+    padding: 14px;
+
+    text-align: center;
+
+    color: #888;
+
+    font-size: 14px;
+}
+
+/* ==========================================
+   MODAL PEMINJAMAN
+========================================== */
+
+.modal-peminjaman-overlay {
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.45);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    z-index: 99999;
+
+    padding: 20px;
+}
+
+
+.modal-peminjaman-box {
+    width: 100%;
+
+    max-width: 380px;
+
+    background: #fff;
+
+    border-radius: 18px;
+
+    padding: 35px 25px;
+
+    text-align: center;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, .2);
+
+    animation:
+        munculModal .2s ease;
+}
+
+
+.modal-peminjaman-box h3 {
+    margin: 18px 0 8px;
+
+    font-size: 22px;
+}
+
+
+.modal-peminjaman-box p {
+    margin: 0;
+
+    color: #777;
+
+    font-size: 14px;
+}
+
+
+/* LOADING */
+
+.spinner-peminjaman {
+    width: 65px;
+
+    height: 65px;
+
+    margin: 0 auto;
+
+    border: 5px solid #e5e5e5;
+
+    border-top-color: #0d6efd;
+
+    border-radius: 50%;
+
+    animation:
+        putarSpinner .8s linear infinite;
+}
+
+
+/* SUCCESS */
+
+.success-icon-peminjaman {
+    width: 65px;
+
+    height: 65px;
+
+    margin: 0 auto;
+
+    border-radius: 50%;
+
+    background: #198754;
+
+    color: #fff;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 35px;
+}
+
+
+/* ERROR */
+
+.error-icon-peminjaman {
+    width: 65px;
+
+    height: 65px;
+
+    margin: 0 auto;
+
+    border-radius: 50%;
+
+    background: #dc3545;
+
+    color: #fff;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 35px;
+}
+
+
+.modal-peminjaman-box button {
+    margin-top: 20px;
+
+    padding: 9px 25px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #0d6efd;
+
+    color: #fff;
+
+    cursor: pointer;
+}
+
+
+@keyframes putarSpinner {
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+
+@keyframes munculModal {
+
+    from {
+        opacity: 0;
+        transform: scale(.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+}
